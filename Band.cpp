@@ -19,14 +19,6 @@ void Band::SetBandDescription(std::wstring description)
 	this->_description = description;
 }
 
-void Band::SetBandAlbumsCount(uint16_t albumsCount)
-{
-	if (albumsCount <= 0)
-	{
-		throw std::exception("Песен должно быть больше 0");
-	}
-	this->_albumsCount = albumsCount;
-}
 
 std::wstring Band::GetBandTitle()
 {
@@ -40,7 +32,7 @@ std::wstring Band::GetBandDescription()
 
 uint16_t Band::GetBandAlbumsCount()
 {
-	return this->_albumsCount;
+	return this->_albums.size();
 }
 
 Album Band::GetBandAlbum(uint16_t index)
@@ -52,7 +44,6 @@ Band::Band(std::wstring title, std::wstring description, std::vector<Album>& alb
 {
 	this->SetBandTitle(title);
 	this->SetBandDescription(description);
-	this->SetBandAlbumsCount(albums.size());
 	std::copy(albums.begin(), albums.end(), std::back_inserter(this->_albums));
 }
 

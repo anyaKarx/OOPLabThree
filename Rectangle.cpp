@@ -3,7 +3,7 @@
 #include <array>
 #include <cassert>
 
-#include "CinInputValidation.h"
+#include "Detail.h"
 #include "Rectangle.h"
 
 void Rectangle::SetLength(double length)

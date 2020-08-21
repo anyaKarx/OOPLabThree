@@ -1,5 +1,5 @@
 #include "Flight.h"
-#include "CinInputValidation.h"
+#include "Detail.h"
 
 #include <array>
 #include <vector>
@@ -170,7 +170,7 @@ void DemoFlightWithTime()
 	srand(static_cast<unsigned int>(time(0)));
 	for (size_t i = 0; i < 10; ++i)
 	{
-		flights.push_back(RandomGenerateInfoFlight());
+		flights.emplace_back(RandomGenerateInfoFlight());
 	}
 	
 	std::copy(flights.begin(), flights.end(), std::ostream_iterator<Flight, wchar_t>(std::wcout, L"\n"));

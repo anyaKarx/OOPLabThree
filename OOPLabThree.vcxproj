@@ -162,7 +162,7 @@
     <ClInclude Include="Album.h" />
     <ClInclude Include="Band.h" />
     <ClInclude Include="Book.h" />
-    <ClInclude Include="CinInputValidation.h" />
+    <ClInclude Include="Detail.h" />
     <ClInclude Include="Citys.h" />
     <ClInclude Include="Flight.h" />
     <ClInclude Include="MusicGenre.h" />

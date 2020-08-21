@@ -11,11 +11,9 @@ private:
 	std::wstring _title;
 	std::wstring _description;
 	std::vector <Album> _albums;
-	size_t _albumsCount = _albums.size();
 public:
 	void SetBandTitle(std::wstring title);
 	void SetBandDescription(std::wstring description);
-	void SetBandAlbumsCount(uint16_t albumsCount);
 
 	std::wstring GetBandTitle();
 	std::wstring GetBandDescription();

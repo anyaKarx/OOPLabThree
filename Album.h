@@ -11,7 +11,6 @@ private:
 	std::wstring _title;
 	uint16_t _year;
 	std::vector <Song> _songs;
-	size_t _countSongs= _songs.size();
 public:
 	void SetAlbumTitle(std::wstring title);
 	void SetAlbumYear(uint16_t year);
@@ -22,7 +21,7 @@ public:
 	Song GetSongFromAlbum(uint16_t index);
 
 	Album(std::wstring title, uint16_t year, std::vector<Song>& songs);
-	Album() {}
+	Album() = default;
 	friend std::wostream& operator<<(std::wostream& os, const Album& album);
 };
 

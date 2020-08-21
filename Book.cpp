@@ -1,5 +1,5 @@
 #include "Book.h"
-#include "CinInputValidation.h"
+#include "Detail.h"
 
 #include <array>
 #include <vector>
@@ -52,7 +52,7 @@ void DemoBook()
 	std::vector <Book> books;
 	for (size_t i = 0; i < 5; i++)
 	{
-		books.push_back(ReadBookFromConsol());
+		books.emplace_back(ReadBookFromConsol());
 	}
 	std::copy(books.begin(), books.end(), std::ostream_iterator<Book, wchar_t>(std::wcout, L"\n"));
 	std::wcout << L"  нигу какого автора вы хотите найти? " << std::endl;

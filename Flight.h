@@ -30,7 +30,6 @@ public:
 	Time GetDepartureTime();
 	uint16_t GetFlightTimeMinutes();
 
-	Flight() {};
 	Flight(uint16_t number, uint16_t departure,
 		uint16_t arrival, uint16_t departureYear, uint16_t departureMonth,
 		uint16_t departureDay, uint16_t departureHour, uint16_t departureMinute,
