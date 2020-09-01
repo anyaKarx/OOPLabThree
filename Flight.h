@@ -1,4 +1,4 @@
-#pragma once
+ï»¿#pragma once
 #include <iostream>
 
 #include "Citys.h"
@@ -24,7 +24,7 @@ public:
 		uint16_t arrivalHour, uint16_t arrivalMinute);
 
 	uint16_t GetFlightNumber();
-	std::wstring GetDeparature();
+	std::wstring GetDeparature(); //TODO: Ð³Ñ€Ð°Ð¼Ð¾ÑˆÐ¸Ð±ÐºÐ°
 	std::wstring GetArrival();
 	Time GetArrivalTime();
 	Time GetDepartureTime();
@@ -41,10 +41,10 @@ public:
 
 inline std::wostream& operator<<(std::wostream& os, const Flight& flight)
 {
-	return os << L"Ðåéñ ¹" << flight._number << L" " << CityNameForConsole(flight._departure)
+	return os << L"ÃÃ¥Ã©Ã± Â¹" << flight._number << L" " << CityNameForConsole(flight._departure)
 		<< L"-" << CityNameForConsole(flight._arrival)
-		<< L". Âðåìÿ îòïðàâëåíèÿ: " << flight._departureTime
-		<< L" Âðåìÿ ïðèáûòèÿ:" << flight._arrivalTime;
+		<< L". Ã‚Ã°Ã¥Ã¬Ã¿ Ã®Ã²Ã¯Ã°Ã Ã¢Ã«Ã¥Ã­Ã¨Ã¿: " << flight._departureTime
+		<< L" Ã‚Ã°Ã¥Ã¬Ã¿ Ã¯Ã°Ã¨Ã¡Ã»Ã²Ã¨Ã¿:" << flight._arrivalTime;
 }
 
 void DemoFlightWithTime();

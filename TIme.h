@@ -1,6 +1,7 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include <iomanip>
+//TODO: исправить название файла - это важно, чтобы правильно подключать файлы в include
 class Time
 {
 private:

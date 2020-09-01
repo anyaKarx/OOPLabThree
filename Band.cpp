@@ -1,11 +1,11 @@
-#include "Band.h"
+п»ї#include "Band.h"
 #include <exception>
 
 void Band::SetBandTitle(std::wstring title)
 {
 	if (size(title) < 1)
 	{
-		throw std::exception("Введите название");
+		throw std::exception("Г‚ГўГҐГ¤ГЁГІГҐ Г­Г Г§ГўГ Г­ГЁГҐ");
 	}
 	this->_title = title;
 }
@@ -14,7 +14,7 @@ void Band::SetBandDescription(std::wstring description)
 {
 	if (size(description) < 1)
 	{
-		throw std::exception("Введите описание");
+		throw std::exception("Г‚ГўГҐГ¤ГЁГІГҐ Г®ГЇГЁГ±Г Г­ГЁГҐ");
 	}
 	this->_description = description;
 }
@@ -109,46 +109,47 @@ void Band::GetAllGenreSongs(GenreMusic findingGenre,
 void DemoBand()
 {
 	std::vector<Song> songsOne;
-	songsOne.emplace_back(Song(L"Ляляля", 3, 5));
-	songsOne.emplace_back(Song(L"Оооо", 3, 4));
-	songsOne.emplace_back(Song(L"Грусть", 10, 5));
-	songsOne.emplace_back(Song(L"Боль", 10, 3));
+	songsOne.emplace_back(Song(L"Г‹ГїГ«ГїГ«Гї", 3, 5));
+	songsOne.emplace_back(Song(L"ГЋГ®Г®Г®", 3, 4));
+	songsOne.emplace_back(Song(L"ГѓГ°ГіГ±ГІГј", 10, 5));
+	songsOne.emplace_back(Song(L"ГЃГ®Г«Гј", 10, 3));
 	std::vector<Song> songsTwo;
-	songsTwo.emplace_back(Song(L"Очень", 11, 5));
-	songsTwo.emplace_back(Song(L"Хорошая", 0, 6));
-	songsTwo.emplace_back(Song(L"лабораторная", 5, 5));
-	songsTwo.emplace_back(Song(L"получилась", 2, 2));
-	songsTwo.emplace_back(Song(L"Ураа", 8, 6));
+	songsTwo.emplace_back(Song(L"ГЋГ·ГҐГ­Гј", 11, 5));
+	songsTwo.emplace_back(Song(L"Г•Г®Г°Г®ГёГ Гї", 0, 6));
+	songsTwo.emplace_back(Song(L"Г«Г ГЎГ®Г°Г ГІГ®Г°Г­Г Гї", 5, 5));
+	songsTwo.emplace_back(Song(L"ГЇГ®Г«ГіГ·ГЁГ«Г Г±Гј", 2, 2));
+	songsTwo.emplace_back(Song(L"Г“Г°Г Г ", 8, 6));
 	std::vector<Song> songsThree;
-	songsThree.emplace_back(Song(L"Песенка", 6, 4));
-	songsThree.emplace_back(Song(L"О счастье", 7, 3));
-	songsThree.emplace_back(Song(L"песня", 8, 4));
-	songsThree.emplace_back(Song(L"бомба", 7, 5));
-	songsThree.emplace_back(Song(L"огонь", 10, 6)); 
+	songsThree.emplace_back(Song(L"ГЏГҐГ±ГҐГ­ГЄГ ", 6, 4));
+	songsThree.emplace_back(Song(L"ГЋ Г±Г·Г Г±ГІГјГҐ", 7, 3));
+	songsThree.emplace_back(Song(L"ГЇГҐГ±Г­Гї", 8, 4));
+	songsThree.emplace_back(Song(L"ГЎГ®Г¬ГЎГ ", 7, 5));
+	songsThree.emplace_back(Song(L"Г®ГЈГ®Г­Гј", 10, 6)); 
 	std::vector<Album> albums;
-	albums.emplace_back(Album(L"Печальная печаль", 1998, songsOne));
-	albums.emplace_back(Album(L"Пеcни про ООП", 2020, songsTwo));
-	albums.emplace_back(Album(L"После сдачи", 2020, songsThree));
-	Band anyaKar(L"Ане4ка", L"основана лучшим студентом тусура;)", albums);
+	albums.emplace_back(Album(L"ГЏГҐГ·Г Г«ГјГ­Г Гї ГЇГҐГ·Г Г«Гј", 1998, songsOne));
+	albums.emplace_back(Album(L"ГЏГҐcГ­ГЁ ГЇГ°Г® ГЋГЋГЏ", 2020, songsTwo));
+	albums.emplace_back(Album(L"ГЏГ®Г±Г«ГҐ Г±Г¤Г Г·ГЁ", 2020, songsThree));
+	Band anyaKar(L"ГЂГ­ГҐ4ГЄГ ", L"Г®Г±Г­Г®ГўГ Г­Г  Г«ГіГ·ГёГЁГ¬ Г±ГІГіГ¤ГҐГ­ГІГ®Г¬ ГІГіГ±ГіГ°Г ;)", albums);
 	std::vector<Song> allSongs;
 	Song bu;
 	Album alb;
 	
 	std::wcout << anyaKar << std::endl;
 
-	if (anyaKar.FindSong(L"Грусть", bu))
-		std::wcout << L"Искомая песня: " << bu << std::endl;
+	if (anyaKar.FindSong(L"ГѓГ°ГіГ±ГІГј", bu))
+		std::wcout << L"Г€Г±ГЄГ®Г¬Г Гї ГЇГҐГ±Г­Гї: " << bu << std::endl;
 	else
-		std::wcout << L"Такой песни нет" << std::endl;
+		std::wcout << L"Г’Г ГЄГ®Г© ГЇГҐГ±Г­ГЁ Г­ГҐГІ" << std::endl;
 
-	if (anyaKar.FindAlbum(Song(L"лабораторная", 5, 5), alb))
-		std::wcout << L"Песня лабораторная была выпущена в альбоме " << alb.GetAlbumTitle() << std::endl;
+	if (anyaKar.FindAlbum(Song(L"Г«Г ГЎГ®Г°Г ГІГ®Г°Г­Г Гї", 5, 5), alb))
+		std::wcout << L"ГЏГҐГ±Г­Гї Г«Г ГЎГ®Г°Г ГІГ®Г°Г­Г Гї ГЎГ»Г«Г  ГўГ»ГЇГіГ№ГҐГ­Г  Гў Г Г«ГјГЎГ®Г¬ГҐ " << alb.GetAlbumTitle() << std::endl;
 	else
-		std::wcout << L"Такого альбома нет." << std::endl;
+		std::wcout << L"Г’Г ГЄГ®ГЈГ® Г Г«ГјГЎГ®Г¬Г  Г­ГҐГІ." << std::endl;
 
-	std::wcout << L"Все песни Ани в жанре шансон:" << std::endl;
+	std::wcout << L"Г‚Г±ГҐ ГЇГҐГ±Г­ГЁ ГЂГ­ГЁ Гў Г¦Г Г­Г°ГҐ ГёГ Г­Г±Г®Г­:" << std::endl;
 	anyaKar.GetAllGenreSongs((GenreMusic)10, allSongs);
 	std::copy(allSongs.begin(), allSongs.end(), 
 		std::ostream_iterator<Song, wchar_t>(std::wcout, L"\n"));
 
 }
+//TODO: РІРѕ РІСЃРµРј РїСЂРѕРµРєС‚Рµ Р·Р°С€Р°РєР°Р»РµРЅРЅР°СЏ РєРёСЂРёР»Р»РёС†Р° (РІРёРґРЅРѕ РґР°Р¶Рµ С‡РµСЂРµР· github). Р Р°Р·РѕР±СЂР°С‚СЊСЃСЏ СЃ РєРѕРґРёСЂРѕРІРєР°РјРё С„Р°Р№Р»РѕРІ РёСЃС…РѕРґРЅРѕРіРѕ РєРѕРґР° + РїРѕРїСЂР°РІРёС‚СЊ С‚РµРєСЃС‚

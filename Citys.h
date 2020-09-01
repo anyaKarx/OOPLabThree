@@ -1,7 +1,7 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 #include <array>
-
+//TODO: РіСЂР°Рј. РѕС€РёР±РєР°
 enum class Citys
 {
 	Tomsk,
@@ -17,15 +17,15 @@ enum class Citys
 	Ankara,
 	NewYork,
 	LosAngeles,
-	END
+	END //TODO: РЅРµ РЅР°РґРѕ С‚Р°РєРёС… СЌР»РµРјРµРЅС‚РѕРІ РІ РїРµСЂРµС‡РёСЃР»РµРЅРёРё
 };
 
 inline std::wstring CityNameForConsole(Citys city)
 {
-	std::array <std::wstring, (size_t)Citys::END> NameCity{ L" \"Томск\" ",
-		L" \"Москва\"", L"\"Лондон\"", L"\"Минск\"", L"\"Киев\"",
-		L"\"Новосибирск\"",L"\"Барселона\"", L"\"Казань\"", L"\"Санкт-Петербург\"",
-		L"\"Крым\"", L"\"Анкара\"", L"\"Нью-Йорк\"", L"\"Лос-Анджелес\"", };
+	std::array <std::wstring, (size_t)Citys::END> NameCity{ L" \"Г’Г®Г¬Г±ГЄ\" ",
+		L" \"ГЊГ®Г±ГЄГўГ \"", L"\"Г‹Г®Г­Г¤Г®Г­\"", L"\"ГЊГЁГ­Г±ГЄ\"", L"\"ГЉГЁГҐГў\"",
+		L"\"ГЌГ®ГўГ®Г±ГЁГЎГЁГ°Г±ГЄ\"",L"\"ГЃГ Г°Г±ГҐГ«Г®Г­Г \"", L"\"ГЉГ Г§Г Г­Гј\"", L"\"Г‘Г Г­ГЄГІ-ГЏГҐГІГҐГ°ГЎГіГ°ГЈ\"",
+		L"\"ГЉГ°Г»Г¬\"", L"\"ГЂГ­ГЄГ Г°Г \"", L"\"ГЌГјГѕ-Г‰Г®Г°ГЄ\"", L"\"Г‹Г®Г±-ГЂГ­Г¤Г¦ГҐГ«ГҐГ±\"", };
 
 	return NameCity[(int)city];
 }

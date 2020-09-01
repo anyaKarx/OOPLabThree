@@ -1,4 +1,4 @@
-#pragma once
+Ôªø#pragma once
 #include <iostream>
 #include <array>
 #include <vector>
@@ -12,7 +12,7 @@ private:
 	std::wstring _description;
 	std::vector <Album> _albums;
 public:
-	void SetBandTitle(std::wstring title);
+	void SetBandTitle(std::wstring title); //TODO: —Å–ª–æ–≤–æ Band
 	void SetBandDescription(std::wstring description);
 
 	std::wstring GetBandTitle();
@@ -33,8 +33,8 @@ public:
 
 inline std::wostream& operator<<(std::wostream& os, const Band& band)
 {
-	os << L" √ÛÔÔ‡:" <<band._title << std::endl << L". ŒÔËÒ‡ÌËÂ:  "
-		<< band._description << std::endl << L". ¿Î¸·ÓÏ˚:"<<std::endl;
+	os << L" √É√∞√≥√Ø√Ø√†:" <<band._title << std::endl << L". √é√Ø√®√±√†√≠√®√•:  "
+		<< band._description << std::endl << L". √Ä√´√º√°√Æ√¨√ª:"<<std::endl;
 	std::copy(band._albums.begin(), band._albums.end(),
 		std::ostream_iterator<Album, wchar_t>(os, L"\n"));
 	return os;

@@ -1,4 +1,4 @@
-#pragma once
+п»ї#pragma once
 #include <iostream>
 #include <array>
 
@@ -16,15 +16,15 @@ enum class GenreMusic
 	HipHop,
 	Chanson,
 	Electronic, 
-	END
+	END //TODO: РЅРµ РЅР°РґРѕ С‚Р°РєРёС… Р·РЅР°С‡РµРЅРёР№ РІ РїРµСЂРµС‡РёСЃР»РµРЅРёРё
 };
 
 inline std::wstring GenreNameForConsole(GenreMusic genre)
 {
-	std::array <std::wstring, (size_t)GenreMusic::END> NameGenre{ L" \"блюз\" ",
-		L" \"вокал\"", L"\"грандж\"", L"\"джаз\"", L"\"инструментальная музыка\"",
-		L"\"классическая музыка\"",L"\"рок\"", L"\"техно\"", L"\"панк\"",
-		L"\"хип-хоп\"", L"\"шансон\"", L"\"электронная музыка\"" };
+	std::array <std::wstring, (size_t)GenreMusic::END> NameGenre{ L" \"ГЎГ«ГѕГ§\" ",
+		L" \"ГўГ®ГЄГ Г«\"", L"\"ГЈГ°Г Г­Г¤Г¦\"", L"\"Г¤Г¦Г Г§\"", L"\"ГЁГ­Г±ГІГ°ГіГ¬ГҐГ­ГІГ Г«ГјГ­Г Гї Г¬ГіГ§Г»ГЄГ \"",
+		L"\"ГЄГ«Г Г±Г±ГЁГ·ГҐГ±ГЄГ Гї Г¬ГіГ§Г»ГЄГ \"",L"\"Г°Г®ГЄ\"", L"\"ГІГҐГµГ­Г®\"", L"\"ГЇГ Г­ГЄ\"",
+		L"\"ГµГЁГЇ-ГµГ®ГЇ\"", L"\"ГёГ Г­Г±Г®Г­\"", L"\"ГЅГ«ГҐГЄГІГ°Г®Г­Г­Г Гї Г¬ГіГ§Г»ГЄГ \"" };
 
 	return NameGenre[(int)genre];
 }

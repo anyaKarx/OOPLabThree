@@ -1,4 +1,4 @@
-#pragma once
+﻿#pragma once
 #include <iostream>
 #include <array>
 
@@ -12,14 +12,14 @@ private:
 	uint16_t _duration;
 
 public:
-	void SetSongTitle(std::wstring title);
+	void SetSongTitle(std::wstring title); //TODO: именование
 	void SetGenre(uint16_t number);
-	void SetSongDuration(uint16_t duration);
+	void SetSongDuration(uint16_t duration); //TODO: именование - и так понятно, что это продолжительность песни
 
-	std::wstring GetSongTitle();
+	std::wstring GetSongTitle(); //TODO: именование
 	std::wstring GetMusicGenre();
 	GenreMusic GetGenre();
-	uint16_t GetSongDuration();
+	uint16_t GetSongDuration(); //TODO: именование
 
 	Song(std::wstring title, uint16_t duration, uint16_t number);
 	Song() {}
@@ -29,5 +29,5 @@ public:
 inline std::wostream& operator<<(std::wostream& os, const Song& song)
 {
 	return os << song._title << L" (" << GenreNameForConsole(song._genre) << L")"
-		<<  L" - " << song._duration << L"���.";
+		<<  L" - " << song._duration << L"ìèí.";
 }

@@ -1,4 +1,4 @@
-#pragma once
+Ôªø#pragma once
 #include <iostream>
 #include <array>
 
@@ -7,21 +7,21 @@ struct Route
 	uint16_t RouteNumber;
 	uint16_t AverageTravelTime;
 	uint16_t RepetitionRate;
-	size_t NumberOfStops;
-	std::array <std::wstring, 10> StopName;
+	size_t NumberOfStops; //TODO: –æ—Ç –ø–æ–ª—è –∏–∑–±–∞–≤–∏—Ç—å—Å—è
+	std::array <std::wstring, 10> StopName; //TODO: –∑–∞–º–µ–Ω–∏—Ç—å –Ω–∞ –≤–µ–∫—Ç–æ—Ä –∏–ª–∏ —Å–ø–∏—Å–æ–∫
 };
 
 Route ReadRouteFromConsole();
-template <typename Conteiner>
+template <typename Conteiner> //TODO: –≥—Ä–∞–º–æ—à–∏–±–∫–∞
 int16_t FindRouteTo(Conteiner var, std::wstring stop);
 void DemoRoute();
 
 inline std::wostream& operator<<(std::wostream& os, const Route& route)
 {
-	os << L"Ã‡¯ÛÚ π" << route.RouteNumber << L" ıÓ‰ËÚ Ò ˜‡ÒÚÓÚÓÈ "
-		<< route.RepetitionRate << L"ÏËÌ.. —Â‰Ìˇˇ ÔÓ‰ÓÎÊËÚÂÎ¸ÌÓÒÚ¸ Ï‡¯ÛÚ‡ "
-		<< route.AverageTravelTime << L"ÏËÌ.." << std::endl
-		<< L" Ã‡¯ÛÚ ÔÓÂÁÊ‡ÂÚ:";
+	os << L"√å√†√∞√∏√∞√≥√≤ ¬π" << route.RouteNumber << L" √µ√Æ√§√®√≤ √± √∑√†√±√≤√Æ√≤√Æ√© "
+		<< route.RepetitionRate << L"√¨√®√≠.. √ë√∞√•√§√≠√ø√ø √Ø√∞√Æ√§√Æ√´√¶√®√≤√•√´√º√≠√Æ√±√≤√º √¨√†√∞√∏√∞√≥√≤√† "
+		<< route.AverageTravelTime << L"√¨√®√≠.." << std::endl
+		<< L" √å√†√∞√∏√∞√≥√≤ √Ø√∞√Æ√•√ß√¶√†√•√≤:";
 	for (size_t i = 0; i < route.NumberOfStops; i++)
 	{
 		os << route.StopName[i];

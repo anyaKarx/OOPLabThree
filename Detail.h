@@ -1,8 +1,8 @@
-#pragma once
+Ôªø#pragma once
 #include<iostream>
 #include <string>
 #include <time.h>
-
+//TODO: —á—Ç–æ –∑–∞ –Ω–∞–∑–≤–∞–Ω–∏–µ —Ñ–∞–π–ª–∞? –î–∞—Ç—å –æ—Å–º—ã—Å–ª–µ–Ω–Ω–æ–µ –Ω–∞–∑–≤–∞–Ω–∏–µ
 namespace tools
 {
    inline double random(double min, double max)
@@ -39,7 +39,7 @@ namespace tools
                if (isStreamFail)
                    std::wcin.clear();
 
-               std::wcout << L"«Ì‡˜ÂÌËÂ ÌÂ‰ÓÔÛÒÚËÏÓ, ÔÓÔÓ·ÛÈÚÂ Â˘Â ‡Á:" << std::endl;
+               std::wcout << L"√á√≠√†√∑√•√≠√®√• √≠√•√§√Æ√Ø√≥√±√≤√®√¨√Æ, √Ø√Æ√Ø√∞√Æ√°√≥√©√≤√• √•√π√• √∞√†√ß:" << std::endl;
            }
            std::wcin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
 
@@ -68,9 +68,9 @@ namespace tools
                         && ((uint16_t)input[i] != dashUnicode)
                         && ((uint16_t)input[i] != pointUnicode)))
                 {
-                    std::wcout << L" ¬‚Ó‰ ‰ÓÎÊÂÌ ·˚Ú¸ Ì‡ ÛÒÒÍÓÏ ˇÁ˚ÍÂ Ë ÌÂ"
-                        << L"ÒÓ‰ÂÊ‡Ú¸ ÔÓÒÚÓÓÌÌËı ÒËÏ‚ÓÎÓ‚ "
-                        << L"(ÍÓÏÂ ÚÓ˜ÍË, ÚËÂ ËÎË ÔÓ·ÂÎ‡)." << std::endl;
+                    std::wcout << L" √Ç√¢√Æ√§ √§√Æ√´√¶√•√≠ √°√ª√≤√º √≠√† √∞√≥√±√±√™√Æ√¨ √ø√ß√ª√™√• √® √≠√•"
+                        << L"√±√Æ√§√•√∞√¶√†√≤√º √Ø√Æ√±√≤√Æ√∞√Æ√≠√≠√®√µ √±√®√¨√¢√Æ√´√Æ√¢ "
+                        << L"(√™√∞√Æ√¨√• √≤√Æ√∑√™√®, √≤√®√∞√• √®√´√® √Ø√∞√Æ√°√•√´√†)." << std::endl;
                     isCorrect = false;
                     break;
                 }

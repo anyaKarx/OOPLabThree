@@ -1,4 +1,5 @@
-#pragma once
+﻿#pragma once
+//TODO: папка файлов заголовков в проекте не должна лежать внутри папки "Исходные файлы"
 #include <iostream>
 #include <array>
 #include <vector>
@@ -12,7 +13,7 @@ private:
 	uint16_t _year;
 	std::vector <Song> _songs;
 public:
-	void SetAlbumTitle(std::wstring title);
+	void SetAlbumTitle(std::wstring title); //TODO: не надо слово Album в названиях методов и полей. Иначе получаются конструкции типа Album.AlbumTitle
 	void SetAlbumYear(uint16_t year);
 
 	std::wstring GetAlbumTitle();
